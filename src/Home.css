@@ -625,8 +625,7 @@ body {
       margin-top: 10px;
     }
 /* ✅ Responsive Design Section */
-
-/* Medium devices (tablets) */
+/* Medium devices (tablets and small laptops) */
 @media (max-width: 992px) {
   .main-content h1 {
     font-size: 50px;
@@ -638,7 +637,13 @@ body {
 
   .image1, .image2, .img, .img1 {
     gap: 100px; /* reduce spacing */
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: nowrap; /* ✅ keep side by side */
+  }
+
+  .image1 img, .image2 img, .img img, .img1 img {
+    width: 250px; /* smaller image size */
+    height: auto;
   }
 
   .container1 {
@@ -678,13 +683,14 @@ body {
   }
 
   .image1, .image2, .img, .img1 {
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: nowrap; /* ✅ stay side by side */
   }
 
   .image1 img, .image2 img, .img img, .img1 img {
-    width: 100%;
-    max-width: 350px;
+    width: 150px; /* smaller but aligned */
     height: auto;
   }
 
@@ -716,3 +722,4 @@ body {
     gap: 15px;
   }
 }
+
