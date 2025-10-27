@@ -1,85 +1,61 @@
+/* ✅ Make header responsive but keep same horizontal layout */
 .topbar {
   background-color: #0d47a1;
   color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* vertically center items */
+  flex-wrap: wrap; /* allows wrapping if space is tight */
   padding: 12px 20px;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  position: fixed;
   z-index: 999;
-  padding: 20px;
+  gap: 10px;
+  box-sizing: border-box;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 1px;
+  flex-shrink: 0; /* prevents logo from shrinking */
 }
 
+.helpline-btn,
+.whatsapp-btn {
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px black;
+  padding: 8px 14px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap; /* prevents text from breaking */
+}
+
+/* Button colors */
 .helpline-btn {
   background-color: #f44336;
   color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  text-shadow: 3px 3px 2px black;
 }
 
 .whatsapp-btn {
   background-color: #25d366;
   color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  text-shadow: 3px 3px 2px black;
-}
-/* ✅ Responsive Header Section */
-
-/* Medium devices (tablets) */
-@media (max-width: 768px) {
-  .topbar {
-    flex-direction: column; /* stack logo + buttons */
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-  }
-
-  .logo {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-
-  .helpline-btn,
-  .whatsapp-btn {
-    font-size: 14px;
-    padding: 8px 12px;
-    margin: 5px;
-  }
+  margin-left: 10px;
 }
 
-/* Small devices (phones) */
-@media (max-width: 480px) {
-  .topbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 12px;
-  }
-
+/* ✅ Responsive scaling for smaller devices */
+@media (max-width: 600px) {
   .logo {
     font-size: 20px;
   }
 
   .helpline-btn,
   .whatsapp-btn {
-    width: 80%; /* stretch buttons across the screen */
     font-size: 13px;
-    padding: 10px;
+    padding: 6px 10px;
   }
 }
