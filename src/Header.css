@@ -39,3 +39,47 @@
   cursor: pointer;
   text-shadow: 3px 3px 2px black;
 }
+/* ✅ Responsive Header Section */
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column; /* stack logo + buttons */
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .helpline-btn,
+  .whatsapp-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 5px;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+  .topbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .helpline-btn,
+  .whatsapp-btn {
+    width: 80%; /* stretch buttons across the screen */
+    font-size: 13px;
+    padding: 10px;
+  }
+}
