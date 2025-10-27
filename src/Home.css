@@ -624,3 +624,95 @@ body {
     .email {
       margin-top: 10px;
     }
+/* ✅ Responsive Design Section */
+
+/* Medium devices (tablets) */
+@media (max-width: 992px) {
+  .main-content h1 {
+    font-size: 50px;
+  }
+
+  .main-content p {
+    font-size: 28px;
+  }
+
+  .image1, .image2, .img, .img1 {
+    gap: 100px; /* reduce spacing */
+    flex-wrap: wrap;
+  }
+
+  .container1 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-section1, .right-section1 {
+    max-width: 100%;
+  }
+
+  .brochure-grid1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .review-section {
+    flex-direction: column;
+  }
+
+  .review-map {
+    width: 100%;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+  .main-content {
+    padding: 20px 10px;
+  }
+
+  .main-content h1 {
+    font-size: 36px;
+  }
+
+  .main-content p {
+    font-size: 20px;
+  }
+
+  .image1, .image2, .img, .img1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image1 img, .image2 img, .img img, .img1 img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .container1 {
+    height: auto;
+    padding: 10px;
+  }
+
+  .brochure-grid1 {
+    grid-template-columns: 1fr;
+  }
+
+  .dipl {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .join, .join2 {
+    font-size: 36px;
+  }
+
+  .review-left img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
